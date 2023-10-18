@@ -1,0 +1,191 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* vamos en el paso 20 */
+
+:root {
+  --color-fondo-pagina: #f1faee;
+  --color-fondo-header: #1d3557;
+  --color-letra-principal: #a8dadc;
+  --color-letra-titulos:#e63946;
+  --color-letra-default:#457b9d;
+}
+
+body{
+  background-color: var(--color-fondo-pagina);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.inactive{
+  display: none;
+}
+
+/* SECCION DEL HEADER */
+header {
+  display: flex;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--color-fondo-header);
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  padding: 20px 20px;
+}
+
+.header__img--logo{
+  width: 50px;
+  height: 50px;
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-around;
+  gap: 1.1rem;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a{
+  color:var(--color-letra-principal) ;
+  text-decoration: none;
+}
+
+
+/* SECCION DEL MAIN */
+
+
+/* SECCION 1 */
+.seccion-1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 2rem;
+  margin: 20px 0;
+  text-align: right;
+  font-size: 1.3rem;
+}
+
+.acerca-de h2{
+  color: var(--color-letra-titulos);
+}
+
+.acerca-de, .acerca-imagen{
+  padding: 0 1rem;
+}
+
+.acerca-de {
+  max-width: 400px;
+}
+
+.acerca-imagen img{ /* Imagen de perfil */
+  width: 300px;
+  height: 350px;
+  border-radius: 4px;
+}
+
+/* SECCION 2 */
+.seccion-2 img{
+  width: 100%;
+  height: 70vh;
+  object-fit:cover;
+}
+
+/* SECCION 3 */
+.seccion-3 h2{
+  text-align: center;
+  padding: 20px 0 0 0;
+  font-size: 2rem;
+  color: var(--color-letra-titulos);
+}
+
+.articulos{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
+}
+
+article h3{
+  color: var(--color-letra-titulos);
+}
+
+.articulos article{
+  max-width: 25%;
+  min-width: 400px;
+  height: 480px;
+  padding: 24px 12px;
+  margin: 8px 4px;
+  text-align: justify;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.articulos article img{
+  width: 100%;
+  height: 300px;
+  padding: 16px;
+  object-fit: contain;
+}
+
+
+/* SECCION DEL FOOTER */
+
+footer {
+  width: 100%;
+  min-height: 140px;
+  background-color: var(--color-fondo-header);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__div{
+  padding: 8px 0;
+  margin: 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__div h3{
+  color: var(--color-letra-titulos);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.p--facebook, .p--instagram{
+  color: var(--color-letra-principal);
+  font-size: 1.2rem;
+}
+
+
+@media (max-width: 760px) {
+
+  .seccion-1{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin: 0;
+  }
+  .acerca-de{
+    min-width: 70%;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .acerca-de h2{
+    padding-bottom: 1rem;
+  }
+}
